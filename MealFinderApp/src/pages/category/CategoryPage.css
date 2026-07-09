@@ -1,0 +1,18 @@
+.cat-dis-continer{
+    border: 1px solid #F00;
+    width: 96%;
+    margin: 30px 15px 10px 15px;
+    padding: 10px;
+}
+.cat-dis-continer h3{
+    font-size: 28px;
+    margin: 0%;
+    color: orangered;
+}
+.meal-by-name-continer{
+    display: flex;
+    justify-content: baseline;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}

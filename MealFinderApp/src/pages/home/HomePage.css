@@ -1,0 +1,8 @@
+.home-cards-continer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: baseline;
+    align-items: center;
+    gap: 35px;
+    padding: 30px 30px;
+}

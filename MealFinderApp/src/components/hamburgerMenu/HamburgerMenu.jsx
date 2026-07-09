@@ -14,9 +14,7 @@ export const HamburgerMenu = ({cat}) => {
     useEffect(()=>{
         dispatch(fetchMealCat())
         // dispatch(fetchMealCategories())
-    },[dispatch])
-    console.log(categories);
-    
+    },[dispatch])    
     useEffect(() => {
         const handleClickOutside = (e) => {
             if (menuRef.current && !menuRef.current.contains(e.target)) {

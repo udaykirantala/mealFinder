@@ -1,0 +1,33 @@
+.banner {
+  position: relative;
+  min-height: 68vh;
+  background-image: url("../../assets/Bg.jpg");
+  background-size: cover;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  top: 150px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+}
+.banner-content-question{
+  font-size: 48px;
+  font-weight: 600;
+  margin: 1% 0%;
+}
+.banner-content-quet{
+    font-size: 20px;
+    margin-top: 1%;
+}

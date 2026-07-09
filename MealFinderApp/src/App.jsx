@@ -1,11 +1,11 @@
 import './App.css'
-import { HeaderNav } from './components/HeaderNav/HeaderNav';
+import { MainLayout } from './layouts/MainLayout'
+import { HomePage } from './pages/Home/HomePage'
+import { AppRoutes } from './routes/AppRoutes'
 
 function App() {
   return (
-    <div>
-      <HeaderNav />
-    </div>
+    <AppRoutes/>
   )
 }
 

@@ -1,0 +1,7 @@
+.meal-card-continer{
+    width: 16%;
+}
+.meal-card-img-container img{
+    object-fit: contain;
+    width: 100%;
+}

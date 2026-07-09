@@ -1,6 +1,7 @@
 .menu-container{
     position:relative;
     display: inline-block;
+    z-index: 999;
 }
 .hamburger{
     font-size: 28px;
