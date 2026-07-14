@@ -1,0 +1,42 @@
+.meal-deatils{
+    margin: 20px 30px;
+}
+.meal-detils-continer{
+    font-size: 25px;
+    border-bottom: 3px solid #DD6856;
+    width: max-content;
+    padding-right: 10px;
+}
+.meal-deatils-card{
+    margin: 0px 30px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+    padding: 15px 20px;
+    border-radius: 6px;
+}
+.measure-card{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap:50px;
+    flex-wrap: wrap;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+    padding: 16px 16px 16px 45px;
+    width:85%;
+    margin: 0px 20px;
+    border-radius: 6px;
+}
+.measure-card-items{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap: 10px;
+}
+.measure-card-items-name{
+    margin: 0%;
+}
+.instructions-card-items{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap:6px;
+}

@@ -1,0 +1,72 @@
+.meal-details-card-continer{
+    display: flex;
+    justify-content: baseline;
+    align-items: start;
+    gap: 20px;
+}
+.meal-details-card-img img{
+    width: 100%;
+    height: 70vh;
+    border-radius: 6px;
+}
+.meal-name{
+    color: #DD6856;
+    border-bottom: 3px solid #DEADA4;
+    font-size: 26px;
+    margin-bottom: 0%;
+}
+.meal-cat-source p{
+    font-weight: bolder;
+    margin: 2% 0%;
+}
+.secondary-content{
+    color: #6E6967;
+}
+.tag-heding{
+    font-weight: bolder;
+    margin: 0%;
+}
+.tags-items-continer{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap: 10px;
+}
+.tags-items{
+    border: 1px solid #DD6856;
+    padding: 5px;
+    border-radius: 5px;
+    color: #DD6856;
+    margin: 0%;
+}
+.meal-tags-continer{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap: 10px;
+}
+.meal-ingredients-items{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap:5px;
+}
+.meal-ingredients-items-continer{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.meal-ingredients{
+    background-color: #F9481D;
+    color: #FFF;
+    padding: 6px 10px;
+    margin-top: 15px;
+    border-radius: 6px;
+}
+.item-index{
+    background-color: #009894;
+    padding: 3px 8px;
+    border-radius: 20px;
+}

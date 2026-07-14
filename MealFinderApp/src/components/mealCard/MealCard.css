@@ -1,7 +1,15 @@
 .meal-card-continer{
-    width: 16%;
+    width: 17%;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+    border-radius: 8px;
 }
 .meal-card-img-container img{
     object-fit: contain;
     width: 100%;
+    border-radius: 8px;
+}
+.meal-card-continer p{
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 700;
 }

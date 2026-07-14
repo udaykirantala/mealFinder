@@ -2,19 +2,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
 import { useEffect, useRef, useState } from "react";
-import {useDispatch, useSelector} from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import "./HamburgerMenu.css"
 import { fetchMealCat } from "../../actions/mealCategories";
+import { useNavigate } from "react-router-dom"
 
-export const HamburgerMenu = ({cat}) => {
+
+export const HamburgerMenu = ({ cat }) => {
     const [isOpen, setIsOpen] = useState(false);
     const menuRef = useRef(null);
     const dispatch = useDispatch()
-    const {categories} = useSelector((state)=>state.meal);
-    useEffect(()=>{
+    const { categories } = useSelector((state) => state.meal);
+    const navigate = useNavigate();
+    const handleNavigation = (category) => {
+        navigate(`/cat/${category}`);
+        setIsOpen(false);
+    };
+    useEffect(() => {
         dispatch(fetchMealCat())
         // dispatch(fetchMealCategories())
-    },[dispatch])    
+    }, [dispatch])
     useEffect(() => {
         const handleClickOutside = (e) => {
             if (menuRef.current && !menuRef.current.contains(e.target)) {
@@ -48,8 +55,13 @@ export const HamburgerMenu = ({cat}) => {
                     >
                         <FontAwesomeIcon icon={faCircleXmark} />
                     </button>
-                    {categories.map((cat)=>(
-                        <p>{cat.strCategory}</p>
+                    {categories.map((cat) => (
+                        <p
+                            key={cat.idCategory}
+                            onClick={() => handleNavigation(cat.strCategory)}
+                        >
+                            {cat.strCategory}
+                        </p>
                     ))}
                 </div>
             )}

@@ -7,7 +7,7 @@ export const Card = ({foodCat})=>{
     }
     return(
         <div onClick={handleNavigation} className="card-continer">
-            <img src={foodCat.strCategoryThumb} alt={foodCat.strCategory}/>
+            <img src={foodCat.strCategoryThumb} alt={foodCat.strCategory} className="card-img"/>
             <div className="tag-continer">
                 <p>{foodCat.strCategory}</p>
             </div>

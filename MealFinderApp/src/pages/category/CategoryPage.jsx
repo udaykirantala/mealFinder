@@ -5,9 +5,10 @@ import { fetchMealCat } from "../../actions/mealCategories";
 import './CategoryPage.css'
 import { fetchMealByName } from "../../actions/mealByNameAction";
 import { MealCard } from "../../components/mealCard/MealCard";
+import { Loader } from "../../components/Loader/Loader";
 export const CategoryPage = () => {
     const dispatch = useDispatch();
-    const { categories } = useSelector((state) => state.meal)
+    const {loading, categories } = useSelector((state) => state.meal)
     const { meals } = useSelector((state) => state.mealbyName)
     const { category } = useParams()
 
@@ -18,19 +19,16 @@ export const CategoryPage = () => {
     const catDescription = categories.find(
         (item) => item.strCategory === category
     );
-    console.log(catDescription?.strCategoryDescription);
-    console.log(category);
-    console.log(meals);
-
-
-
+    if(loading){
+        return <Loader/>
+    }
     return (
-        <div>
+        <div className="cat-continer">
             <div className="cat-dis-continer">
                 <h3>{catDescription?.strCategory}</h3>
                 <p>{catDescription?.strCategoryDescription}</p>
             </div>
-            <div>
+            <div className="cat-meal-cards-continer">
                 <h3>Meals</h3>
                 <div className="meal-by-name-continer">
                     {meals.map((item) => (

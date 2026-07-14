@@ -5,13 +5,18 @@ import { Banner } from "../../components/banner/Banner";
 import { Card } from "../../components/card/Card";
 import { fetchMealCat } from "../../actions/mealCategories";
 import "./HomePage.css"
+import { Loader } from "../../components/Loader/Loader";
 export const HomePage = () => {
     const dispatch = useDispatch()
-    const { categories } = useSelector((state) => state.meal);
+    const { loading,categories } = useSelector((state) => state.meal);
     useEffect(() => {
         dispatch(fetchMealCat())
     }, [dispatch])
-    console.log(categories);
+
+    if(loading){
+      return <Loader/>
+    }
+
     return (
         <div>
             <div className="home-cards-continer">
