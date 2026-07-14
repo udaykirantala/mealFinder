@@ -1,6 +1,4 @@
 import './App.css'
-import { MainLayout } from './layouts/MainLayout'
-import { HomePage } from './pages/Home/HomePage'
 import { AppRoutes } from './routes/AppRoutes'
 
 function App() {
